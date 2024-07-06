@@ -60,6 +60,7 @@
   align-items: flex-end;
   justify-content: space-between;
   margin-bottom: 48px;
+  text-align: right;
 
   @include viewport-tablet {
     justify-content: flex-end;
