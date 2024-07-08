@@ -1,0 +1,21 @@
+.tabs__nav {
+  @include reset-list;
+}
+
+.tabs__nav-label {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.tabs__nav-label span {
+  color: rgba($accent-color, 0.5);
+}
+
+.tabs__nav-label input:checked ~ span {
+  color: $accent-color;
+}
+
+.tabs__list {
+  @include reset-list;
+}
