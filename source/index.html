@@ -122,10 +122,65 @@
         </div>
       </section>
 
+      <section class="price" data-test="price">
+        <div class="container">
+
+          <h2 class="price__title title title--md">Абонементы</h2>
+          <div class="price__tabs tabs">
+            <ol class="tabs__nav">
+              <li class="tabs__nav-item">
+                <label class="tabs__nav-label">
+                  <input class="visually-hidden" name="price" type="radio" checked>
+                  <span>1 месяц</span>
+                </label>
+              </li>
+              <li class="tabs__nav-item">
+                <label class="tabs__nav-label">
+                  <input class="visually-hidden" name="price" type="radio">
+                  <span>6 месяцев</span>
+                </label>
+              </li>
+              <li class="tabs__nav-item">
+                <label class="tabs__nav-label">
+                  <input class="visually-hidden" name="price" type="radio">
+                  <span>12 месяцев</span>
+                </label>
+              </li>
+            </ol>
+            <ol class="tabs__list">
+              <li class="tabs__list-item">
+                <article class="card">
+                  <h3 class="card__title title title--sm">С тренером</h3>
+                  <span class="card__time">12 занятий</span>
+                  <span class="card__price">5000</span>
+                  <a href="#" class="card__link button button--dark">Купить абонемент</a>
+                </article>
+              </li>
+              <li class="tabs__list-item">
+                <article class="card">
+                  <h3 class="card__title title title--sm">Дневной</h3>
+                  <time datetime="Mo, Tu, We, Th, Fr, Sa 7:00-18:00" class="card__time">с 8:00 до 17:00</time>
+                  <span class="card__price">1700</span>
+                  <a href="#" class="card__link button button--dark">Купить абонемент</a>
+                </article>
+              </li>
+              <li class="tabs__list-item">
+                <article class="card">
+                  <h3 class="card__title title title--sm">Полный день</h3>
+                  <time datetime="Mo, Tu, We, Th, Fr, Sa 7:00-22:00" class="card__time">с 8:00 до 22:00</time>
+                  <span class="card__price">2700</span>
+                  <a href="#" class="card__link button button--dark">Купить абонемент</a>
+                </article>
+              </li>
+            </ol>
+          </div>
+
+        </div>
+      </section>
+
     </main>
 
-    <!-- <div data-test="price">price</div>
-    <div data-test="games">games</div>
+    <!-- <div data-test="games">games</div>
     <div data-test="juri">juri</div>
     <div data-test="features">features</div>
     <div data-test="offers">offers</div>
