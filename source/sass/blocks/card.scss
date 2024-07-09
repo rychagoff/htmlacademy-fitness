@@ -3,12 +3,27 @@
   flex-direction: column;
   align-items: center;
   gap: 18px;
+  max-width: 390px;
   padding: 50px 42px;
   background-color: $white-color;
+
+  @include viewport-tablet {
+    gap: 22px;
+    padding: 65px;
+  }
+
+  @include viewport-desktop {
+    gap: 17px;
+  }
 }
 
 .card__time {
   margin: 0;
+
+  @include viewport-tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .card__price {
@@ -20,6 +35,11 @@
   font-size: 80px;
   line-height: 120px;
   color: $shadow-color;
+
+  @include viewport-tablet {
+    font-size: 100px;
+    line-height: 150px;
+  }
 }
 
 .card__price-shown {
@@ -35,6 +55,12 @@
   line-height: 72px;
   color: #103aae;
 
+  @include viewport-tablet {
+    gap: 14px;
+    font-size: 60px;
+    line-height: 90px;
+  }
+
   &::after {
     content: "";
     position: relative;
@@ -46,5 +72,23 @@
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: contain;
+
+    @include viewport-tablet {
+      width: 30px;
+      height: 42px;
+    }
+  }
+}
+
+.card__link {
+  padding: 25px 42px;
+  width: 100%;
+
+  @include viewport-tablet {
+    width: 250px;
+  }
+
+  @include viewport-tablet {
+    width: 230px;
   }
 }

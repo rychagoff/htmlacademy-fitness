@@ -4,8 +4,18 @@
   display: flex;
   justify-content: space-between;
   max-width: 310px;
+  margin: 0 auto;
   margin-bottom: 30px;
   border-bottom: 2px solid rgba($grey-color, 0.2);
+
+  @include viewport-tablet {
+    margin-bottom: 45px;
+  }
+
+  @include viewport-desktop {
+    max-width: 350px;
+    margin-bottom: 40px;
+  }
 }
 
 .tabs__nav-item {
@@ -14,10 +24,22 @@
 
 .tabs__nav-label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  padding-top: 2px;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
+
+  @include viewport-tablet {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @include viewport-desktop {
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .tabs__nav-label span {
@@ -44,4 +66,13 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 35px;
+
+  @include viewport-tablet {
+    justify-items: center;
+    gap: 40px;
+  }
+
+  @include viewport-desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
