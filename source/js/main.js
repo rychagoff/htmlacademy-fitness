@@ -4,3 +4,4 @@
 // import 'swiper/css';
 
 import './video';
+import './price';
