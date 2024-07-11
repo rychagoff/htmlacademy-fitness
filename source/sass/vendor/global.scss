@@ -18,7 +18,8 @@ body {
   line-height: 22px;
   font-weight: 300;
   color: $primary-color;
-  background-color: $additional-light;
+  background-color: $white-color;
+  overflow-x: hidden;
 }
 
 img {

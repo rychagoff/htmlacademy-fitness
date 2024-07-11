@@ -1,0 +1,104 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  max-width: 390px;
+  padding: 50px 42px;
+  background-color: $white-color;
+
+  @include viewport-tablet {
+    gap: 22px;
+    padding: 65px;
+  }
+
+  @include viewport-desktop {
+    gap: 17px;
+  }
+}
+
+.card__time {
+  margin: 0;
+
+  @include viewport-tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.card__price {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 120px;
+  font-weight: 700;
+
+  @include viewport-tablet {
+    height: 150px;
+  }
+}
+
+.card__price-decor {
+  position: absolute;
+  left: calc(-50% / 2);
+  right: calc(-50% / 2);
+  font-size: 80px;
+  line-height: 150px;
+  color: $shadow-color;
+  text-align: center;
+
+  @include viewport-tablet {
+    font-size: 100px;
+    line-height: 150px;
+  }
+}
+
+.card__price-shown {
+  position: relative;
+  z-index: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 48px;
+  line-height: 72px;
+  color: #103aae;
+
+  @include viewport-tablet {
+    gap: 14px;
+    font-size: 60px;
+    line-height: 90px;
+  }
+
+  &::after {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 33px;
+    background-color: $primary-color;
+    mask-image: url("../__spritemap#sprite-rubble-view");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+
+    @include viewport-tablet {
+      width: 30px;
+      height: 42px;
+    }
+  }
+}
+
+.card__link {
+  padding: 25px 42px;
+  width: 100%;
+
+  @include viewport-tablet {
+    width: 250px;
+  }
+
+  @include viewport-desktop {
+    width: 230px;
+  }
+}

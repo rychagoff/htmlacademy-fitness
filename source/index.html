@@ -122,10 +122,143 @@
         </div>
       </section>
 
+      <section class="price" data-test="price">
+        <div class="container">
+
+          <h2 class="price__title title title--md">Абонементы</h2>
+          <div class="price__tabs tabs">
+            <div class="tabs__nav" role="tablist" aria-label="Тарифы на абонементы">
+              <button class="tabs__button tabs__button--active" role="tab" type="button" aria-selected="true" aria-controls="one-month">1 месяц</button>
+              <button class="tabs__button" role="tab" type="button" aria-selected="false" aria-controls="six-month">6 месяцев</button>
+              <button class="tabs__button" role="tab" type="button" aria-selected="false" aria-controls="twelve-month">12 месяцев</button>
+            </div>
+
+            <div class="tabs__wrapper">
+              <ol class="tabs__list" role="tabpanel" id="one-month">
+                <li class="tabs__list-item">
+                  <article class="card">
+                    <h3 class="card__title title title--sm">С тренером</h3>
+                    <p class="card__time">12 занятий</p>
+                    <span class="card__price">
+                      <span class="card__price-decor" aria-hidden="true">5000</span>
+                      <span class="card__price-shown">5000</span>
+                    </span>
+                    <a class="card__link button button--dark" href="#">Купить абонемент</a>
+                  </article>
+                </li>
+                <li class="tabs__list-item">
+                  <article class="card">
+                    <h3 class="card__title title title--sm">Дневной</h3>
+                    <p class="card__time">с 8:00 до 17:00</p>
+                    <span class="card__price">
+                      <span class="card__price-decor" aria-hidden="true">1700</span>
+                      <span class="card__price-shown">1700</span>
+                    </span>
+                    <a class="card__link button button--dark" href="#">Купить абонемент</a>
+                  </article>
+                </li>
+                <li class="tabs__list-item">
+                  <article class="card">
+                    <h3 class="card__title title title--sm">Полный день</h3>
+                    <p class="card__time">с 8:00 до 22:00</p>
+                    <span class="card__price">
+                      <span class="card__price-decor" aria-hidden="true">2700</span>
+                      <span class="card__price-shown">2700</span>
+                    </span>
+                    <a class="card__link button button--dark" href="#">Купить абонемент</a>
+                  </article>
+                </li>
+              </ol>
+
+              <ol class="tabs__list tabs__list--hidden" role="tabpanel" id="six-month">
+                <li class="tabs__list-item">
+                  <article class="card">
+                    <h3 class="card__title title title--sm">С тренером</h3>
+                    <p class="card__time">12 занятий</p>
+                    <span class="card__price">
+                      <span class="card__price-decor" aria-hidden="true">30000</span>
+                      <span class="card__price-shown">30000</span>
+                    </span>
+                    <a class="card__link button button--dark" href="#">Купить абонемент</a>
+                  </article>
+                </li>
+                <li class="tabs__list-item">
+                  <article class="card">
+                    <h3 class="card__title title title--sm">Дневной</h3>
+                    <p class="card__time">с 8:00 до 17:00</p>
+                    <span class="card__price">
+                      <span class="card__price-decor" aria-hidden="true">10200</span>
+                      <span class="card__price-shown">10200</span>
+                    </span>
+                    <a class="card__link button button--dark" href="#">Купить абонемент</a>
+                  </article>
+                </li>
+                <li class="tabs__list-item">
+                  <article class="card">
+                    <h3 class="card__title title title--sm">Полный день</h3>
+                    <p class="card__time">с 8:00 до 22:00</p>
+                    <span class="card__price">
+                      <span class="card__price-decor" aria-hidden="true">16200</span>
+                      <span class="card__price-shown">16200</span>
+                    </span>
+                    <a class="card__link button button--dark" href="#">Купить абонемент</a>
+                  </article>
+                </li>
+              </ol>
+
+              <ol class="tabs__list tabs__list--hidden" role="tabpanel" id="twelve-month">
+                <li class="tabs__list-item">
+                  <article class="card">
+                    <h3 class="card__title title title--sm">С тренером</h3>
+                    <p class="card__time">12 занятий</p>
+                    <span class="card__price">
+                      <span class="card__price-decor" aria-hidden="true">60000</span>
+                      <span class="card__price-shown">60000</span>
+                    </span>
+                    <a class="card__link button button--dark" href="#">Купить абонемент</a>
+                  </article>
+                </li>
+                <li class="tabs__list-item">
+                  <article class="card">
+                    <h3 class="card__title title title--sm">Дневной</h3>
+                    <p class="card__time">с 8:00 до 17:00</p>
+                    <span class="card__price">
+                      <span class="card__price-decor" aria-hidden="true">20400</span>
+                      <span class="card__price-shown">20400</span>
+                    </span>
+                    <a class="card__link button button--dark" href="#">Купить абонемент</a>
+                  </article>
+                </li>
+                <li class="tabs__list-item">
+                  <article class="card">
+                    <h3 class="card__title title title--sm">Полный день</h3>
+                    <p class="card__time">с 8:00 до 22:00</p>
+                    <span class="card__price">
+                      <span class="card__price-decor" aria-hidden="true">32400</span>
+                      <span class="card__price-shown">32400</span>
+                    </span>
+                    <a class="card__link button button--dark" href="#">Купить абонемент</a>
+                  </article>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="price__decoration">
+            <!-- <picture>
+              <source type="image/webp" media="(min-width: 1366px)" srcset="img/price/price-desktop@1x.webp 1x, img/price/price-desktop@2x.webp 2x" width="321" height="384">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/price/price-tablet@1x.webp 1x, img/price/price-tablet@2x.webp 2x" width="275" height="328">
+
+              <source type="image/png" media="(min-width: 1366px)" srcset="img/price/price-desktop@1x.png 1x, img/price/price-desktop@2x.png 2x" width="321" height="384">
+              <img src="img/price/price-tablet@1x.png" srcset="img/price/price-tablet@2x.png 2x" width="275" height="328" alt="Блины для штанги" loading="lazy">
+            </picture> -->
+          </div>
+
+        </div>
+      </section>
+
     </main>
 
-    <!-- <div data-test="price">price</div>
-    <div data-test="games">games</div>
+    <!-- <div data-test="games">games</div>
     <div data-test="juri">juri</div>
     <div data-test="features">features</div>
     <div data-test="offers">offers</div>

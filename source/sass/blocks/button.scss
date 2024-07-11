@@ -6,10 +6,16 @@
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  border: 2px solid $white-color;
 
   &--light {
     padding: 22px;
     color: $white-color;
+    border: 2px solid $white-color;
+  }
+
+  &--dark {
+    padding: 25px 42px;
+    color: $primary-color;
+    border: 2px solid $primary-color;
   }
 }

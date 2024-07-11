@@ -1,0 +1,76 @@
+.tabs__nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 310px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-bottom: 2px solid rgba($grey-color, 0.2);
+
+  @include viewport-tablet {
+    margin-bottom: 45px;
+  }
+
+  @include viewport-desktop {
+    max-width: 350px;
+    margin-bottom: 40px;
+  }
+}
+
+.tabs__button {
+  margin: 0;
+  padding: 2px 0 6px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: rgba($accent-color, 0.5);
+  border: 0;
+  background: none;
+
+  @include viewport-tablet {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @include viewport-desktop {
+    padding: 2px 0 8px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &--active {
+    color: $primary-color;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: $tabs-color;
+    text-underline-offset: 8px;
+
+    @include viewport-tablet {
+      text-underline-offset: 9px;
+    }
+
+    @include viewport-desktop {
+      text-underline-offset: 11px;
+    }
+  }
+}
+
+.tabs__list {
+  @include reset-list;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px;
+
+  &--hidden {
+    display: none;
+  }
+
+  @include viewport-tablet {
+    justify-items: center;
+    gap: 40px;
+  }
+
+  @include viewport-desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

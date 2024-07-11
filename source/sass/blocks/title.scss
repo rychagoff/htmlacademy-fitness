@@ -1,6 +1,16 @@
 .title {
   margin: 0;
 
+  @include viewport-tablet {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  @include viewport-desktop {
+    font-size: 54px;
+    line-height: 54px;
+  }
+
   &--lg {
     font-family: $primary-font;
     font-size: 62px;
@@ -27,15 +37,31 @@
     font-size: 32px;
     line-height: 32px;
     font-weight: 600;
+
+    @include viewport-tablet {
+      font-size: 42px;
+      line-height: 42px;
+    }
+
+    @include viewport-desktop {
+      font-size: 54px;
+      line-height: 54px;
+    }
   }
 
-  @include viewport-tablet {
-    font-size: 42px;
-    line-height: 42px;
-  }
+  &--sm {
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 700;
 
-  @include viewport-desktop {
-    font-size: 54px;
-    line-height: 54px;
+    @include viewport-tablet {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    @include viewport-desktop {
+      font-size: 26px;
+      line-height: 26px;
+    }
   }
 }
