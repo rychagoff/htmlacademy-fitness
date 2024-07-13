@@ -1,5 +1,25 @@
 .games {
   padding: 25px 0;
+
+  @include viewport-tablet {
+    padding: 60px 0;
+  }
+
+  @include viewport-desktop {
+    padding: 100px 0;
+  }
+}
+
+.games__inner {
+  display: grid;
+
+  @include viewport-tablet {
+    grid-template-columns: 300px 1fr;
+  }
+
+  @include viewport-desktop {
+    grid-template-columns: 500px 1fr;
+  }
 }
 
 .games__column {
@@ -7,28 +27,58 @@
     padding: 40px;
     background-color: $banner-color;
     color: $white-color;
+
+    @include viewport-desktop {
+      padding: 60px 80px;
+    }
   }
 
   &--info p {
     font-size: 16px;
     line-height: 20px;
+
+    @include viewport-tablet {
+      margin: 10px 0;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @include viewport-desktop {
+      margin: 30px 0;
+    }
   }
 
   &--image {
     width: 100%;
-    height: 290px;
+    height: auto;
+    min-height: 290px;
     background-image:
       url("../../img/games/games-tablet@2x.webp"),
       url("../../img/games/games-tablet@2x.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    @include viewport-desktop {
+      height: 500px;
+    }
   }
 }
 
 .games__header {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: end;
+  gap: 20px;
+
+  @include viewport-tablet {
+    justify-items: start;
+  }
+
+  @include viewport-desktop {
+    grid-template-columns: 168px auto;
+    gap: 77px;
+  }
 }
 
 .games__title {
@@ -37,6 +87,12 @@
   line-height: 54px;
   font-weight: 600;
   text-transform: uppercase;
+
+  @include viewport-desktop {
+    padding-top: 2px;
+    font-size: 82px;
+    line-height: 96px;
+  }
 }
 
 .games__date {
@@ -44,16 +100,37 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 5px;
+
+  @include viewport-tablet {
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+  }
+
+  @include viewport-desktop {
+    gap: 20px;
+    max-width: 95px;
+  }
 }
 
 .games__date time {
   display: flex;
   gap: 3px;
-  padding-top: 2px;
+  margin-top: 2px;
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
-  border-top: 1px solid $white-color;
+
+  @include viewport-tablet {
+    align-items: center;
+    gap: 5px;
+  }
+
+  @include viewport-desktop {
+    margin-top: 6px;
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
 .games__date time span {
@@ -61,14 +138,38 @@
   font-size: 0.5em;
   line-height: 1;
   font-weight: 400;
+
+  @include viewport-tablet {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
-.games__day span,
-.games__time span {
+.games__day > span,
+.games__time > span {
+  display: inline-flex;
+  padding-bottom: 2px;
   font-size: 16px;
   line-height: 20px;
+  vertical-align: top;
+  border-bottom: 1px solid #ffffff;
+
+  @include viewport-tablet {
+    display: flex;
+    padding-bottom: 1px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @include viewport-desktop {
+    padding-bottom: 6px;
+  }
 }
 
 .games__button {
   width: 100%;
+
+  @include viewport-tablet {
+    padding: 25px 0;
+  }
 }
