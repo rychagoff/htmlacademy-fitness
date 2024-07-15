@@ -5,8 +5,8 @@ import { Navigation } from 'swiper/modules';
 
 const swiperJuri = new Swiper('.juri__slider', {
   loop: true,
-  // slidesPerView: 1,
-  // spaceBetween: 40,
+  slidesPerView: 4,
+  spaceBetween: 40,
   modules: [ Navigation ],
   navigation: {
     nextEl: '.swiper-button-next',
