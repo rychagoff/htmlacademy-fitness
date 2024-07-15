@@ -3,5 +3,7 @@
 // import {Navigation, Pagination} from "swiper/modules";
 // import 'swiper/css';
 
-import './video';
-import './price';
+// import './vendor/swiper-bundle.min';
+import './vendor/video';
+import './vendor/price';
+import './vendor/swiper';

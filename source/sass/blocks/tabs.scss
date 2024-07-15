@@ -54,8 +54,8 @@
   }
 }
 
-.tabs__list {
-  @include reset-list;
+.tabs__panel {
+  // @include reset-list;
 
   display: grid;
   grid-template-columns: 1fr;
