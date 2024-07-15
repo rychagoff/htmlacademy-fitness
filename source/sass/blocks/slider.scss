@@ -1,0 +1,46 @@
+.slider__navigation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  width: 100%;
+
+  @include viewport-tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // @include viewport-desktop {
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   width: calc(100% + 2 * 18px + 2 * 36px);
+  // }
+}
+
+.slider__button {
+  position: relative;
+  width: 18px;
+  height: 34px;
+  mask-image: url("../__spritemap#sprite-arrow-view");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  background-color: $primary-color;
+
+  &--prev {
+    left: 5px;
+
+    @include viewport-desktop {
+      left: calc(-18px - 36px);
+    }
+  }
+
+  &--next {
+    right: 5px;
+    transform: rotate(180deg);
+
+    @include viewport-desktop {
+      right: calc(-18px - 36px);
+    }
+  }
+}
