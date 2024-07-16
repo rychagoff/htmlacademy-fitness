@@ -1,0 +1,46 @@
+.features {
+  padding: 40px 0;
+}
+
+.features__title {
+  margin-bottom: 40px;
+}
+
+.features__list {
+  @include reset-list;
+}
+
+.features__item b {
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: 700;
+  background: $accent-gradient;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.features__item strong {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.features__item {
+  &--lead {
+    position: relative;
+    left: calc(0px - var(--padding-offset));
+    padding: 30px var(--padding-offset) 40px;
+    width: 100vw;
+    background-color: $primary-color;
+    color: $white-color;
+  }
+
+  &--lead b {
+    background: none;
+    -webkit-text-fill-color: $white-color;
+  }
+
+  &--lead strong {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
