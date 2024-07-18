@@ -1,8 +1,31 @@
+.offers {
+  padding: 40px 0;
+}
+
+.offers__title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.offers__content {
+  display: grid;
+  gap: 40px;
+}
+
 .offers__list {
   @include reset-list;
+
+  display: grid;
+  gap: 30px;
 }
 
 .offers__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
   color: $secondary-color;
   border: 7px solid;
   border-image: linear-gradient(135deg, $tabs-color, #00359f) 1;
@@ -14,11 +37,16 @@
   font-weight: 700;
 }
 
+.offers__item p {
+  margin: 0;
+}
+
 .offers__link {
+  display: inline-flex;
+  padding-bottom: 5px;
   line-height: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  text-underline-offset: 5px;
-  text-decoration-color: $divider-color;
-  color: $secondary-color;
+  text-decoration: none;
+  border-bottom: 1px solid $divider-color;
 }

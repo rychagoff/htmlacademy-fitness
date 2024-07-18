@@ -1,7 +1,19 @@
 
 .promo {
+  position: relative;
+  left: calc(0px - var(--padding-offset));
+  width: calc(100% + var(--padding-offset) * 2);
   color: $white-color;
   background-color: $banner-color;
+}
+
+.promo__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 30px;
+  text-align: center;
 }
 
 .promo__text span {
@@ -11,16 +23,23 @@
 }
 
 .promo__text b {
+  display: block;
+  margin-top: 9px;
   font-size: 64px;
   line-height: 64px;
 }
 
 .promo__text p {
+  margin: 0;
   font-size: 16px;
   line-height: 20px;
 }
 
+.promo__image img {
+  display: block;
+}
+
 .promo__link {
   color: $white-color;
-  text-decoration-color: $white-color;
+  border-color: $white-color;
 }
