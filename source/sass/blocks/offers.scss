@@ -1,0 +1,24 @@
+.offers__list {
+  @include reset-list;
+}
+
+.offers__item {
+  color: $secondary-color;
+  border: 7px solid;
+  border-image: linear-gradient(135deg, $tabs-color, #00359f) 1;
+}
+
+.offers__item strong {
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.offers__link {
+  line-height: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-underline-offset: 5px;
+  text-decoration-color: $divider-color;
+  color: $secondary-color;
+}

@@ -1,0 +1,26 @@
+
+.promo {
+  color: $white-color;
+  background-color: $banner-color;
+}
+
+.promo__text span {
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.promo__text b {
+  font-size: 64px;
+  line-height: 64px;
+}
+
+.promo__text p {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.promo__link {
+  color: $white-color;
+  text-decoration-color: $white-color;
+}
