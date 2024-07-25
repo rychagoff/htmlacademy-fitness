@@ -1,15 +1,40 @@
 .offers {
   padding: 40px 0;
+
+  @include viewport-tablet {
+    padding: 60px 0;
+  }
+
+  @include viewport-desktop {
+    padding: 100px 0;
+  }
 }
 
 .offers__title {
   margin-bottom: 40px;
   text-align: center;
+
+  @include viewport-tablet {
+    margin-bottom: 35px;
+  }
+
+  @include viewport-desktop {
+    margin-bottom: 70px;
+  }
 }
 
 .offers__content {
   display: grid;
   gap: 40px;
+
+  @include viewport-tablet {
+    gap: 35px;
+  }
+
+  @include viewport-desktop {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
 }
 
 .offers__list {
@@ -17,28 +42,56 @@
 
   display: grid;
   gap: 30px;
+
+  @include viewport-tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include viewport-desktop {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    margin-top: 82px;
+  }
 }
 
 .offers__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
   padding: 20px;
   text-align: center;
   color: $secondary-color;
   border: 7px solid;
   border-image: linear-gradient(135deg, $tabs-color, #00359f) 1;
+
+  @include viewport-tablet {
+    align-items: flex-start;
+    text-align: left;
+  }
 }
 
 .offers__item strong {
+  margin-bottom: 20px;
   font-size: 22px;
   line-height: 22px;
   font-weight: 700;
+
+  @include viewport-tablet {
+    margin-bottom: 10px;
+    font-size: 26px;
+    line-height: 26px;
+  }
 }
 
 .offers__item p {
   margin: 0;
+  margin-bottom: 20px;
+
+  @include viewport-tablet {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .offers__link {
@@ -49,4 +102,8 @@
   text-transform: uppercase;
   text-decoration: none;
   border-bottom: 1px solid $divider-color;
+
+  @include viewport-tablet {
+    margin-top: auto;
+  }
 }
