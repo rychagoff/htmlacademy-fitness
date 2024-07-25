@@ -101,6 +101,7 @@
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
+  color: $secondary-color;
   border-bottom: 1px solid $divider-color;
 
   @include viewport-tablet {
