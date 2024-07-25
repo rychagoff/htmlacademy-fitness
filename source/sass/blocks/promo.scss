@@ -1,0 +1,87 @@
+
+.promo {
+  position: relative;
+  left: calc(0px - var(--padding-offset));
+  width: calc(100% + var(--padding-offset) * 2);
+  color: $white-color;
+  background-color: $banner-color;
+
+  @include viewport-tablet {
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    width: 100%;
+  }
+
+  @include viewport-desktop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.promo__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 30px;
+  text-align: center;
+
+  @include viewport-tablet {
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px 25px;
+    text-align: left;
+  }
+
+  @include viewport-desktop {
+    padding: 40px 45px;
+  }
+}
+
+.promo__text span {
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
+
+  @include viewport-tablet {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.promo__text b {
+  display: block;
+  margin-top: 9px;
+  font-size: 64px;
+  line-height: 64px;
+
+  @include viewport-tablet {
+    margin-top: 20px;
+    font-size: 70px;
+    line-height: 70px;
+  }
+}
+
+.promo__text p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+
+  @include viewport-tablet {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.promo__image img {
+  display: block;
+}
+
+.promo__link {
+  color: $white-color;
+  border-color: $white-color;
+
+  @include viewport-tablet {
+    margin-top: auto;
+  }
+}
