@@ -17,14 +17,9 @@
 }
 
 .tabs__button {
-  margin: 0;
-  padding: 2px 0 6px;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
-  color: rgba($accent-color, 0.5);
-  border: 0;
-  background: none;
 
   @include viewport-tablet {
     font-size: 18px;
@@ -37,7 +32,19 @@
     line-height: 20px;
   }
 
-  &--active {
+  &--border {
+    margin: 0;
+    padding: 2px 0 6px;
+    color: rgba($accent-color, 0.5);
+    border: 0;
+    background: none;
+
+    @include viewport-desktop {
+      padding: 2px 0 8px;
+    }
+  }
+
+  &--border-active {
     color: $primary-color;
     text-decoration: underline;
     text-decoration-thickness: 2px;

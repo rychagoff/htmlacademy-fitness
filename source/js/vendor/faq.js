@@ -1,4 +1,4 @@
-const tabs = document.querySelector('.price__tabs');
+const tabs = document.querySelector('.faq__tabs');
 const tabButtons = tabs.querySelectorAll('.tabs__button');
 const tabPanels = tabs.querySelectorAll('.tabs__panel');
 const tabPanelsArray = Array.from(tabPanels);
@@ -15,7 +15,7 @@ const showTab = (evt) => {
   forEachHandler(removeActive, tabButtons);
   forEachHandler(hiddenPanel, tabPanels);
   evt.currentTarget.setAttribute('aria-selected', true);
-  evt.currentTarget.classList.add('tabs__button--border-active');
+  evt.currentTarget.classList.add('tabs__button--active');
 
   const tabPanel = tabPanelsArray.find((panel) => {
     if (panel.id === tabControl) {
@@ -31,7 +31,7 @@ function onclickHandler(button) {
 
 function removeActive(button) {
   button.setAttribute('aria-selected', false);
-  button.classList.remove('tabs__button--border-active');
+  button.classList.remove('tabs__button--active');
 }
 
 function hiddenPanel(panel) {

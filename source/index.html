@@ -128,9 +128,9 @@
           <h2 class="price__title title title--md">Абонементы</h2>
           <div class="price__tabs tabs">
             <div class="tabs__nav" role="tablist" aria-label="Тарифы на абонементы">
-              <button class="tabs__button tabs__button--active" role="tab" type="button" aria-selected="true" aria-controls="one-month">1 месяц</button>
-              <button class="tabs__button" role="tab" type="button" aria-selected="false" aria-controls="six-month">6 месяцев</button>
-              <button class="tabs__button" role="tab" type="button" aria-selected="false" aria-controls="twelve-month">12 месяцев</button>
+              <button class="tabs__button tabs__button--border tabs__button--border-active" role="tab" type="button" aria-selected="true" aria-controls="one-month">1 месяц</button>
+              <button class="tabs__button tabs__button--border" role="tab" type="button" aria-selected="false" aria-controls="six-month">6 месяцев</button>
+              <button class="tabs__button tabs__button--border" role="tab" type="button" aria-selected="false" aria-controls="twelve-month">12 месяцев</button>
             </div>
 
             <div class="tabs__wrapper">
@@ -562,10 +562,159 @@
         </div>
       </section>
 
+      <section class="faq" data-test="faq">
+        <div class="container">
+
+          <h2 class="faq__title title title--md">Вопросы и ответы</h2>
+          <div class="faq__tabs tabs">
+            <div class="tabs__nav" role="tablist" aria-label="Вопросы и ответы">
+              <button class="tabs__button tabs__button--active" role="tab" type="button" aria-selected="true" aria-controls="centre">Центр</button>
+              <button class="tabs__button" role="tab" type="button" aria-selected="false" aria-controls="season-ticket">Абонемент</button>
+              <button class="tabs__button" role="tab" type="button" aria-selected="false" aria-controls="services">Услуги</button>
+              <button class="tabs__button" role="tab" type="button" aria-selected="false" aria-controls="rules">Правила</button>
+            </div>
+
+            <div class="tabs__wrapper">
+              <div class="tabs__panel" role="tabpanel" id="centre">
+                <ul class="accordion">
+                  <li class="accordion__item">
+                    <button class="accordion__control">
+                      <strong>Как стать членом фитнес-центра?</strong>
+                      <span class="accordion__icon"></span>
+                    </button>
+                    <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                  </li>
+                  <li class="accordion__item">
+                    <button class="accordion__control">
+                      <strong>Где можно посмотреть расписание?</strong>
+                      <span class="accordion__icon"></span>
+                    </button>
+                    <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.</p>
+                  </li>
+                  <li class="accordion__item">
+                    <button class="accordion__control">
+                      <strong>Есть кулеры в центре? Предоставляются полотенца?</strong>
+                      <span class="accordion__icon"></span>
+                    </button>
+                    <p>Да, в нашем фитнес-центре установлены кулеры с питьевой водой. Также мы предоставляем полотенца для удобства наших клиентов.</p>
+                  </li>
+                  <li class="accordion__item">
+                    <button class="accordion__control">
+                      <strong>Сколько тренеров работает в клубе и какова их квалификация?</strong>
+                      <span class="accordion__icon"></span>
+                    </button>
+                    <p>В нашем фитнес-центре работает команда из 8 высококвалифицированных тренеров. Все они имеют профильное образование, сертификацию и многолетний опыт работы в фитнес-индустрии. Наши тренеры регулярно проходят дополнительные курсы и тренинги, чтобы предлагать вам самые современные и эффективные методики тренировок.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tabs__panel tabs__panel--hidden" role="tabpanel" id="season-ticket">
+                <ul class="accordion">
+                  <li class="accordion__item">
+                    <button class="accordion__control">
+                      <strong>Занятия с тренером входят в абонемент?</strong>
+                      <span class="accordion__icon"></span>
+                    </button>
+                    <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                  </li>
+                  <li class="accordion__item">
+                    <button class="accordion__control">
+                      <strong>Можно ли заморозить абонемент?</strong>
+                      <span class="accordion__icon"></span>
+                    </button>
+                    <p>Да, вы можете заморозить абонемент на определённый период. Для этого необходимо обратиться к администратору фитнес-центра и заполнить заявление. Заморозка возможна при наличии уважительных причин, таких как болезнь или отпуск.</p>
+                  </li>
+                  <li class="accordion__item">
+                    <button class="accordion__control">
+                      <strong>Есть ли лимит по посещениям тренажерного зала и групповых занятий?</strong>
+                      <span class="accordion__icon"></span>
+                    </button>
+                    <p>Нет, в рамках вашего абонемента нет лимита по посещениям тренажерного зала и групповых занятий. Вы можете посещать их в любое время в соответствии с расписанием и наличием мест.</p>
+                  </li>
+                  <li class="accordion__item">
+                    <button class="accordion__control">
+                      <strong>Что такое семейный доступ и доступ для друзей?</strong>
+                      <span class="accordion__icon"></span>
+                    </button>
+                    <p>Семейный доступ — абонемент, который позволяет нескольким членам семьи пользоваться услугами фитнес-центра по сниженной цене. Доступ для друзей — предложение, позволяющее вам добавлять друзей в ваш абонемент со скидкой или бонусами.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tabs__panel tabs__panel--hidden" role="tabpanel" id="services">
+                <ul class="accordion">
+                  <li class="accordion__item">
+                    <button class="accordion__control">
+                      <strong>Предлагает ли клуб услуги по консультированию по вопросам питания?</strong>
+                      <span class="accordion__icon"></span>
+                    </button>
+                    <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
+                  </li>
+                  <li class="accordion__item">
+                    <button class="accordion__control">
+                      <strong>Проводятся ли в клубе какие-либо мероприятия или соревнования?</strong>
+                      <span class="accordion__icon"></span>
+                    </button>
+                    <p>Да, в нашем фитнес-центре регулярно проводятся различные мероприятия и соревнования, включая фитнес-фестивали, турниры по командным видам спорта, мастер-классы и челленджи. Следите за нашими обновлениями в социальных сетях и на сайте, чтобы не пропустить анонсы будущих мероприятий.</p>
+                  </li>
+                  <li class="accordion__item">
+                    <button class="accordion__control">
+                      <strong>Можно ли приобрести в центре спортивное питание?</strong>
+                      <span class="accordion__icon"></span>
+                    </button>
+                    <p>Да, в нашем фитнес-центре вы можете приобрести спортивное питание, включая протеиновые порошки, энергетические напитки и витамины. Все продукты представлены в специальном уголке магазина на стойке ресепшн.</p>
+                  </li>
+                  <li class="accordion__item">
+                    <button class="accordion__control">
+                      <strong>Есть ли в центре детская комната?</strong>
+                      <span class="accordion__icon"></span>
+                    </button>
+                    <p>Да, в нашем фитнес-центре есть детская комната, где дети могут находиться под присмотром опытных педагогов, пока вы занимаетесь. Детская комната оборудована всем необходимым для комфортного и безопасного времяпрепровождения детей.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tabs__panel tabs__panel--hidden" role="tabpanel" id="rules">
+                <ul class="accordion">
+                  <li class="accordion__item">
+                    <button class="accordion__control">
+                      <strong>Есть в фитнес-центре дресс-код?</strong>
+                      <span class="accordion__icon"></span>
+                    </button>
+                    <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
+                  </li>
+                  <li class="accordion__item">
+                    <button class="accordion__control">
+                      <strong>Можно ли приводить с собой детей на тренировки?</strong>
+                      <span class="accordion__icon"></span>
+                    </button>
+                    <p>Да, вы можете приводить детей на тренировки, но только в специально отведённое время и на занятия, предназначенные для детей. Также в нашем центре есть детская комната, где дети могут находиться под присмотром опытных педагогов, пока вы занимаетесь.</p>
+                  </li>
+                  <li class="accordion__item">
+                    <button class="accordion__control">
+                      <strong>Какие дополнительные правила посещения центра?</strong>
+                      <span class="accordion__icon"></span>
+                    </button>
+                    <p>Используйте спортивную одежду и обувь в залах, соблюдайте гигиену и пользуйтесь полотенцами на тренажёрах, не используйте мобильные телефоны во время занятий, уважайте персонал и других клиентов, а также соблюдайте правила пользования бассейном и сауной.</p>
+                  </li>
+                  <li class="accordion__item">
+                    <button class="accordion__control">
+                      <strong>Нужна ли медицинская справка для посещения залов и бассейна?</strong>
+                      <span class="accordion__icon"></span>
+                    </button>
+                    <p>Да, для посещения залов и бассейна требуется медицинская справка, подтверждающая отсутствие противопоказаний для занятий спортом и пользования бассейном. Это необходимо для обеспечения вашей безопасности и здоровья во время тренировок.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
     </main>
 
-    <!-- <div data-test="faq">faq</div>
-    <div data-test="reviews">reviews</div>
+    <!-- <div data-test="reviews">reviews</div>
     <div data-test="form">form</div>
     <div data-test="footer">footer</div> -->
 

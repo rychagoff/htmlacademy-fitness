@@ -7,3 +7,4 @@
 import './vendor/video';
 import './vendor/price';
 import './vendor/swiper';
+import './vendor/faq';
