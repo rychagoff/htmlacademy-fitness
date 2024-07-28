@@ -1,4 +1,6 @@
-const tabs = document.querySelector('.price__tabs');
+import { onloadAccordion } from "./accordion";
+
+const tabs = document.querySelector('.faq__tabs');
 const tabButtons = tabs.querySelectorAll('.tabs__button');
 const tabPanels = tabs.querySelectorAll('.tabs__panel');
 const tabPanelsArray = Array.from(tabPanels);
@@ -11,11 +13,10 @@ const forEachHandler = (callback, items) => {
 
 const showTab = (evt) => {
   const tabControl = evt.target.attributes['aria-controls'].value;
-  console.log(tabControl);
   forEachHandler(removeActive, tabButtons);
   forEachHandler(hiddenPanel, tabPanels);
   evt.currentTarget.setAttribute('aria-selected', true);
-  evt.currentTarget.classList.add('tabs__button--border-active');
+  evt.currentTarget.classList.add('tabs__button--background-active');
 
   const tabPanel = tabPanelsArray.find((panel) => {
     if (panel.id === tabControl) {
@@ -23,7 +24,8 @@ const showTab = (evt) => {
     }
   });
   tabPanel.classList.remove('tabs__panel--hidden');
-  tabPanel.classList.add('tabs__panel--is-current');
+
+  onloadAccordion();
 };
 
 function onclickHandler(button) {
@@ -32,11 +34,10 @@ function onclickHandler(button) {
 
 function removeActive(button) {
   button.setAttribute('aria-selected', false);
-  button.classList.remove('tabs__button--border-active');
+  button.classList.remove('tabs__button--background-active');
 }
 
 function hiddenPanel(panel) {
-  panel.classList.remove('tabs__panel--is-current');
   panel.classList.add('tabs__panel--hidden');
 }
 

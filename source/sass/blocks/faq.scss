@@ -1,0 +1,65 @@
+.faq {
+  padding: 70px 0;
+  background-color: $additional-light;
+
+  @include viewport-tablet {
+    padding: 60px 0;
+  }
+
+  @include viewport-desktop {
+    padding: 100px 0;
+  }
+}
+
+.faq__title {
+  text-align: center;
+  margin-bottom: 35px;
+
+  @include viewport-tablet {
+    margin-bottom: 45px;
+  }
+
+  @include viewport-desktop {
+    text-align: left;
+    margin-bottom: 50px;
+  }
+}
+
+.faq__tabs {
+  display: grid;
+  gap: 35px;
+
+  @include viewport-tablet {
+    gap: 45px;
+  }
+
+  @include viewport-desktop {
+    grid-template-columns: 260px 1fr;
+    gap: 40px;
+    align-items: flex-start;
+  }
+}
+
+.faq__tabs .tabs__nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 100%;
+  margin: 0;
+
+  @include viewport-tablet {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  @include viewport-desktop {
+    grid-template-columns: 1fr;
+  }
+}
+
+// .faq__tabs .tabs__wrapper {
+//   @include viewport-desktop {
+//     margin-top: -1px;
+//   }
+// }
