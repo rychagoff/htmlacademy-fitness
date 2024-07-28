@@ -30,6 +30,27 @@
   z-index: 1;
 }
 
+.price__tabs .tabs__nav {
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+}
+
+.price__tabs .tabs__panel {
+  &--is-current {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 35px;
+
+    @include viewport-tablet {
+      justify-items: center;
+      gap: 40px;
+    }
+
+    @include viewport-desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
 .price__decoration {
   position: absolute;
   z-index: 0;

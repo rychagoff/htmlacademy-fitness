@@ -1,3 +1,5 @@
+import { onloadAccordion } from "./accordion";
+
 const tabs = document.querySelector('.faq__tabs');
 const tabButtons = tabs.querySelectorAll('.tabs__button');
 const tabPanels = tabs.querySelectorAll('.tabs__panel');
@@ -11,11 +13,10 @@ const forEachHandler = (callback, items) => {
 
 const showTab = (evt) => {
   const tabControl = evt.target.attributes['aria-controls'].value;
-  console.log(tabControl);
   forEachHandler(removeActive, tabButtons);
   forEachHandler(hiddenPanel, tabPanels);
   evt.currentTarget.setAttribute('aria-selected', true);
-  evt.currentTarget.classList.add('tabs__button--active');
+  evt.currentTarget.classList.add('tabs__button--background-active');
 
   const tabPanel = tabPanelsArray.find((panel) => {
     if (panel.id === tabControl) {
@@ -23,6 +24,8 @@ const showTab = (evt) => {
     }
   });
   tabPanel.classList.remove('tabs__panel--hidden');
+
+  onloadAccordion();
 };
 
 function onclickHandler(button) {
@@ -31,7 +34,7 @@ function onclickHandler(button) {
 
 function removeActive(button) {
   button.setAttribute('aria-selected', false);
-  button.classList.remove('tabs__button--active');
+  button.classList.remove('tabs__button--background-active');
 }
 
 function hiddenPanel(panel) {

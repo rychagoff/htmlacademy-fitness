@@ -4,7 +4,6 @@
   max-width: 310px;
   margin: 0 auto;
   margin-bottom: 30px;
-  border-bottom: 2px solid rgba($grey-color, 0.2);
 
   @include viewport-tablet {
     margin-bottom: 45px;
@@ -59,25 +58,29 @@
       text-underline-offset: 11px;
     }
   }
+
+  &--background {
+    margin: 0;
+    padding: 14px 23px;
+    color: $primary-color;
+    background: none;
+    border: 1px solid rgba($primary-color, 0.2);
+
+    @include viewport-tablet {
+      max-height: 54px;
+      padding: 18px;
+    }
+  }
+
+  &--background-active {
+    color: $white-color;
+    background: $tabs-gradient;
+    border: none;
+  }
 }
 
 .tabs__panel {
-  // @include reset-list;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 35px;
-
   &--hidden {
     display: none;
-  }
-
-  @include viewport-tablet {
-    justify-items: center;
-    gap: 40px;
-  }
-
-  @include viewport-desktop {
-    grid-template-columns: repeat(3, 1fr);
   }
 }

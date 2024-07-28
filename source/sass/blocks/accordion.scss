@@ -1,0 +1,148 @@
+.accordion {
+  @include reset-list;
+
+  width: 100%;
+}
+
+.accordion__item p {
+  width: calc(100% - 52px);
+  max-height: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  overflow: hidden;
+  transition: max-height 0.25s;
+
+  @include viewport-tablet {
+    max-width: 560px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @include viewport-desktop {
+    max-width: 660px;
+  }
+}
+
+.accordion__item {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: $divider-color;
+  }
+
+  &:last-child::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: $divider-color;
+  }
+
+  &--is-opened p {
+    margin-bottom: 20px;
+
+    @include viewport-tablet {
+      margin-top: -13px;
+      margin-bottom: 23px;
+    }
+
+    @include viewport-desktop {
+      margin-top: 0;
+    }
+  }
+
+  &--is-opened .accordion__icon {
+    background-color: $secondary-color;
+    transform: rotate(90deg);
+  }
+
+  &--is-opened .accordion__icon::before {
+    width: 0;
+  }
+
+  &--is-opened .accordion__icon::after {
+    background-color: $white-color;
+  }
+}
+
+.accordion__control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  font-size: 20px;
+  line-height: 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+
+  @include viewport-tablet {
+    padding: 23px 0;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  @include viewport-desktop {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.accordion__control span {
+  @include viewport-tablet {
+    max-width: 500px;
+  }
+
+  @include viewport-desktop {
+    max-width: 100%;
+  }
+}
+
+.accordion__icon {
+  position: relative;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  margin-left: 22px;
+  border: 1px solid $secondary-color;
+  border-radius: 100%;
+  transition: transform 0.25s ease-out, background-color 0.25s ease-out;
+
+  @include viewport-tablet {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: $secondary-color;
+    transform: translate(-50%, -50%);
+  }
+
+  &::before {
+    width: 50%;
+    height: 1px;
+    transition: width 0.25 ease-out;
+  }
+
+  &::after {
+    width: 1px;
+    height: 50%;
+  }
+}

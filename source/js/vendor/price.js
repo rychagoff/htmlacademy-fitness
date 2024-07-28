@@ -23,6 +23,7 @@ const showTab = (evt) => {
     }
   });
   tabPanel.classList.remove('tabs__panel--hidden');
+  tabPanel.classList.add('tabs__panel--is-current');
 };
 
 function onclickHandler(button) {
@@ -35,6 +36,7 @@ function removeActive(button) {
 }
 
 function hiddenPanel(panel) {
+  panel.classList.remove('tabs__panel--is-current');
   panel.classList.add('tabs__panel--hidden');
 }
 
