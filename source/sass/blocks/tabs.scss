@@ -67,15 +67,30 @@
     border: 1px solid rgba($primary-color, 0.2);
 
     @include viewport-tablet {
-      max-height: 54px;
-      padding: 18px;
+      padding: 17px;
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    @include viewport-desktop {
+      padding: 19px 0 15px;
     }
   }
 
   &--background-active {
     color: $white-color;
     background: $tabs-gradient;
-    border: none;
+    border: 0;
+
+    @include viewport-desktop {
+      padding: 20px 0 16px;
+    }
+  }
+}
+
+.tabs__wrapper {
+  @include viewport-desktop {
+    // margin-top: -1px;
   }
 }
 
