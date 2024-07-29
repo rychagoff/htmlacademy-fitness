@@ -29,8 +29,6 @@
 
   &::before {
     content: "";
-
-    // position: absolute;
     position: relative;
     top: 0;
     right: 0;
@@ -38,12 +36,14 @@
     display: block;
     height: 1px;
     background-color: $divider-color;
+
+    @include viewport-desktop {
+      position: absolute;
+    }
   }
 
   &:last-child::after {
     content: "";
-
-    // position: absolute;
     position: relative;
     right: 0;
     left: 0;
@@ -51,6 +51,10 @@
     display: block;
     height: 1px;
     background-color: $divider-color;
+
+    @include viewport-desktop {
+      position: absolute;
+    }
   }
 
   &--is-opened p {
