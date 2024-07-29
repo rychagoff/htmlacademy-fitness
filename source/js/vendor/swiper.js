@@ -33,8 +33,23 @@ const swiperReviews = new Swiper('.reviews__slider', {
   spaceBetween: 50,
   modules: [ Navigation ],
   navigation: {
+    lockClass: 'disabled',
     nextEl: '.reviews__button--next',
     prevEl: '.reviews__button--prev',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 50
+    },
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 60
+    },
+    1366: {
+      slidesPerView: 1,
+      spaceBetween: 80
+    }
   }
 })
 
